@@ -46,6 +46,15 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'pengguna' => [
+            'driver' => 'session',
+            'provider' => 'customers'
+        ],
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users'
+        ],
+
     ],
 
     /*
@@ -71,10 +80,10 @@ return [
             'model' => App\Models\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'customers' => [
+            'driver' => 'eloqient',
+            'table' => App\Models\User::class,
+        ],
     ],
 
     /*
